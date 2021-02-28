@@ -4,8 +4,6 @@ import { UsersRepository } from '../repositories/UsersRepository';
 import * as Yup from 'yup';
 import { AppError } from '../errors/AppError';
 
-import { UpdateUserService } from '../services/UpdateUserService';
-
 export class UserController {
   async create(request: Request, response: Response) {
     const { name, email } = request.body;
