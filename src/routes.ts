@@ -18,9 +18,14 @@ const answerController = new AnswerController();
 const npsController = new NpsController();
 
 router.post('/users', userController.create);
+router.get('/users', userController.read);
+router.put('/users/:id', userController.update);
+router.delete('/users/:id', userController.delete);
 
 router.post('/surveys', surveyController.create);
-router.get('/surveys', surveyController.show);
+router.get('/surveys', surveyController.read);
+router.put('/surveys/:id', surveyController.update);
+router.delete('/surveys/:id', surveyController.delete);
 
 router.post('/sendMail', sendMailController.execute);
 
